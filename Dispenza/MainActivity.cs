@@ -24,7 +24,7 @@ namespace Dispenza
             itens.Add("Arroz");
             itens.Add("Feijão");
             itens.Add("Carne");
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, itens);
+            ListaDispensaAdapter adapter = new ListaDispensaAdapter(this, itens);
             listaDispensa.Adapter = adapter;
             /*
             Button button = FindViewById<Button>(Resource.Id.MyButton);
