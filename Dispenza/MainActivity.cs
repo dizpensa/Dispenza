@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace Dispenza
 {
-    [Activity(Label = "Dispenza", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Dispenza")]
     public class MainActivity : Activity
     {
         private List<string> itens = new List<string>();
