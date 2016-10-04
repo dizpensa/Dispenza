@@ -5,26 +5,32 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Collections.Generic;
 
 namespace Dispenza
 {
     [Activity(Label = "Dispenza", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
-
+        private List<string> itens = new List<string>();
+        private ListView listaDispensa;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            // Set our view from the "main" layout resource
+            ActionBar.Hide();
             SetContentView(Resource.Layout.Main);
 
-            // Get our button from the layout resource,
-            // and attach an event to it
+            listaDispensa = FindViewById<ListView>(Resource.Id.ListaDispensa);
+            itens.Add("Arroz");
+            itens.Add("Feijão");
+            itens.Add("Carne");
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, itens);
+            listaDispensa.Adapter = adapter;
+            /*
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
             button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+            */
         }
     }
 }
