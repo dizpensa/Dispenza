@@ -63,17 +63,20 @@ namespace Dispenza
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050002
-			public const int LinhaLista = 2131034114;
+			// aapt resource value: 0x7f050004
+			public const int AdicionarItemDispensa = 2131034116;
+			
+			// aapt resource value: 0x7f050001
+			public const int ImagemItem1 = 2131034113;
 			
 			// aapt resource value: 0x7f050003
 			public const int ListaDispensa = 2131034115;
 			
-			// aapt resource value: 0x7f050001
-			public const int NomeItem = 2131034113;
+			// aapt resource value: 0x7f050002
+			public const int NomeItem1 = 2131034114;
 			
 			// aapt resource value: 0x7f050000
-			public const int imageView1 = 2131034112;
+			public const int linearLayout1 = 2131034112;
 			
 			static Id()
 			{
@@ -92,10 +95,7 @@ namespace Dispenza
 			public const int ItemDispensa = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int LinhaDispensa = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int Main = 2130903041;
 			
 			static Layout()
 			{

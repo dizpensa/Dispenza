@@ -13,12 +13,20 @@ namespace Dispenza
     public class MainActivity : Activity
     {
         private List<string> itens = new List<string>();
+        private List<ItemDispensa> itensD = new List<ItemDispensa>();
         private ListView listaDispensa;
+        private Button adicionar;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            ActionBar.Hide();
+            //ActionBar.Hide();
             SetContentView(Resource.Layout.Main);
+
+            adicionar = FindViewById<Button>(Resource.Id.AdicionarItemDispensa);
+
+            itensD.Add(new ItemDispensa(1, "Arroz"));
+            itensD.Add(new ItemDispensa(2, "Banana"));
+            itensD.Add(new ItemDispensa(3, "Carambola"));
 
             listaDispensa = FindViewById<ListView>(Resource.Id.ListaDispensa);
             itens.Add("Arroz");
@@ -26,11 +34,22 @@ namespace Dispenza
             itens.Add("Carne");
             ListaDispensaAdapter adapter = new ListaDispensaAdapter(this, itens);
             listaDispensa.Adapter = adapter;
-            /*
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+            listaDispensa.ItemClick += ListaDispensa_ItemClick;
+            adicionar.Click += Adicionar_Click;
+        }
 
-            button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
-            */
+        private void ListaDispensa_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            itens.RemoveAt(e.Position);
+            ListaDispensaAdapter adapter = new ListaDispensaAdapter(this, itens);
+            listaDispensa.Adapter = adapter;
+        }
+
+        private void Adicionar_Click(object sender, EventArgs e)
+        {
+            itens.Add("Item padão");
+            ListaDispensaAdapter adapter = new ListaDispensaAdapter(this, itens);
+            listaDispensa.Adapter = adapter;
         }
     }
 }

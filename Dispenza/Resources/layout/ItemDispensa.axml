@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:background="#773f19"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <ImageView
-        android:src="@drawable/sacola"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView1" />
-    <TextView
-        android:text="Item de dispensa"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/NomeItem"
-        android:layout_gravity="center"
-        android:gravity="center" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:paddingStart="50px">
+        <ImageView
+            android:src="@drawable/sacola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ImagemItem1" />
+        <TextView
+            android:text="Nome"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/NomeItem1"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </LinearLayout>
 </LinearLayout>

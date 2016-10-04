@@ -45,8 +45,9 @@ namespace Dispenza
             {
                 row = LayoutInflater.From(context).Inflate(Resource.Layout.ItemDispensa,null,false);
             }
-            TextView nomeItem = row.FindViewById<TextView>(Resource.Id.NomeItem);
+            TextView nomeItem = row.FindViewById<TextView>(Resource.Id.NomeItem1);
             nomeItem.Text = itens[position];
+
             return row;
         }
     }
